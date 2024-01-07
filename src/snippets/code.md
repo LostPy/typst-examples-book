@@ -32,6 +32,28 @@ See [reference](https://typst.app/docs/reference/text/raw/#parameters-theme)
 Then the code becomes `x <- a`
 ```
 
+## Customize background
+
+To write code in customisable block, use a show rule:
+
+
+``````typ
+#show raw.where(block: true): it => block(
+  radius: 1em,
+  fill: luma(240),
+  stroke: 1pt,
+  width: 100%,
+  inset: 1em,
+  it
+)
+
+```rust
+fn main() {
+  println!("Hello World!");
+}
+```
+``````
+
 ## Advanced formatting
 
 See [packages](../packages/code.md) section.
